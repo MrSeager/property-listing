@@ -1,0 +1,38 @@
+.cs-max-w {
+    max-width: 1920px !important;
+}
+
+.cs-h {
+    height: 550px !important;
+}
+
+.cs-position {
+    transform: translateY(-50%);
+    bottom: -25% !important;
+    left: 5%;
+    right: 5%;
+}
+
+.cs-transition {
+    transition: .5s !important;
+}
+
+/*Background*/
+.cs-bg-image {
+    background: url('../images/cabin.png') no-repeat center top / 100%;
+}
+
+.cs-bg-main {
+    background-color: #121826 !important;
+}
+
+.cs-bg-one {
+    background-color: #282f3df8 !important;
+}
+
+/*Buttons*/
+.cs-btn-one:hover, 
+.cs-btn-one:focus, 
+.cs-btn-one:active {   
+    background-color: #4a5567 !important;
+}
