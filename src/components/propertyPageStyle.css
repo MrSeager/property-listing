@@ -27,7 +27,8 @@
 }
 
 .cs-bg-one {
-    background-color: #282f3df8 !important;
+    background: #282E3E;
+    background: linear-gradient(180deg, rgba(40, 46, 62, 1) 0%, rgba(40, 46, 62, 1) 49%, rgba(31, 40, 57, 1) 51%, rgba(31, 40, 57, 1) 100%);
 }
 
 /*Buttons*/

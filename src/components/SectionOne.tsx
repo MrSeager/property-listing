@@ -24,8 +24,9 @@ const SectionOne: FC = () => {
                         type='switch'
                         id='cs-switch'
                         label='Superhost'
+                        className='text-white'
                     />
-                    <Form.Select>
+                    <Form.Select className='shadow-none bg-transparent text-white rounded-3'>
                         <option>Property type</option>
                         <option value='1'>1 bedroom</option>
                         <option value='2'>2 bedrooms</option>
