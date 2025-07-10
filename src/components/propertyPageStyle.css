@@ -37,3 +37,33 @@
 .cs-btn-one:active {   
     background-color: #4a5567 !important;
 }
+
+.form-switch .form-check-input {
+    width: 3em !important;
+    height: 1.5em;
+    box-shadow: none !important;
+    border: none !important;
+    background-color: #4e81ee !important;
+    --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27%23fff%27/%3e%3c/svg%3e") !important;
+}
+
+.cs-ddbtn-main:hover,
+.cs-ddbtn-main:focus {
+    background-color: #4a5567 !important;
+}
+
+.cs-ddbtn:hover {
+    color: white !important;
+    background-color: #4e81ee !important;
+}
+
+.cs-ddbtn.active {
+    background-color: #4a5567 !important;
+}
+
+@media (max-width: 991px) {
+    .cs-position {
+        left: 0;
+        right: 0;
+    }
+}

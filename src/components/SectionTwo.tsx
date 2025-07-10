@@ -3,7 +3,7 @@ import { FC, useState, useEffect } from 'react';
 import SectionTwoProperty from './SectionTwoProperty.tsx';
 //Bootstrap
 import 'bootstrap/dist/css/bootstrap.css';
-import { Container, Row } from 'react-bootstrap';
+import { Container, Row, Spinner } from 'react-bootstrap';
 
 interface PropertiesProps {
     id: number,
@@ -33,16 +33,10 @@ const SectionTwo: FC<SectionTwoProps> = ({ properties }) => {
                     properties.map((property, index) => (
                         <SectionTwoProperty 
                             index={index}
-                            image={property.image}
-                            title={property.title}
-                            description={property.description}
-                            bedroom={property.capacity.bedroom}
-                            people={property.capacity.people}
-                            price={property.price}
-                            rating={property.rating}
+                            property={property}
                         />
                     ))
-                ) : <p>Loading...</p>}
+                ) : <Spinner className='mx-auto my-5' animation="grow" variant="light" role='status' />}
             </Row>
         </Container>
     );
