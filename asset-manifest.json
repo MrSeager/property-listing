@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/property-listing/static/css/main.e3969e28.css",
+    "main.js": "/property-listing/static/js/main.b53ecf5d.js",
+    "static/js/453.fb1da22b.chunk.js": "/property-listing/static/js/453.fb1da22b.chunk.js",
+    "static/media/cabin.png": "/property-listing/static/media/cabin.8509a1ca845d82f00e9e.png",
+    "index.html": "/property-listing/index.html",
+    "main.e3969e28.css.map": "/property-listing/static/css/main.e3969e28.css.map",
+    "main.b53ecf5d.js.map": "/property-listing/static/js/main.b53ecf5d.js.map",
+    "453.fb1da22b.chunk.js.map": "/property-listing/static/js/453.fb1da22b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e3969e28.css",
+    "static/js/main.b53ecf5d.js"
+  ]
+}
