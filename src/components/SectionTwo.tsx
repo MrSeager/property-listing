@@ -27,7 +27,7 @@ interface SectionTwoProps {
 const SectionTwo: FC<SectionTwoProps> = ({ properties }) => {
     return (
         <Container className='my-5 pt-5 mx-auto px-0'>
-            <h2 className='text-white'>Over 200 stays</h2>
+            <h2 className='user-select-none text-white'>Over 200 stays</h2>
             <Row>
                 {properties.length > 0 ? (
                     properties.map((property, index) => (

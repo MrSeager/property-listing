@@ -1,12 +1,14 @@
-import { FC, useState, useEffect } from 'react';
+import { FC, useState } from 'react';
 //Components
-
+import { useHoverCard } from './anim.tsx';
 //Bootstrap
 import 'bootstrap/dist/css/bootstrap.css';
 import { Badge, Col, Card } from 'react-bootstrap';
 //Icons
 import { BsFillHouseFill } from "react-icons/bs";
 import { FaUser, FaStar } from "react-icons/fa";
+//Spring
+import { animated } from '@react-spring/web';
 
 interface PropertyProps {
     id: number,
@@ -29,9 +31,18 @@ interface SectionTwoPropertyProps {
 }
 
 const SectionTwoProperty: FC<SectionTwoPropertyProps> = ({ index, property }) => {
+    const [isHovered, setHovered] = useState<boolean>(false);
+    
+    const animHover = useHoverCard(isHovered, 1.03);
+    
     return(
-        <Col index={index} lg={4} md={6} xs={12} className='p-3'>
-            <Card className='position-relative bg-transparent text-white-50 border border-dark-subtle h-100'>
+        <Col index={index} lg={4} md={6} xs={12} className='p-3 user-select-none'>
+            <animated.div
+                style={animHover}
+                onMouseEnter={() => setHovered(true)}
+                onMouseLeave={() => setHovered(false)}
+                className='card position-relative bg-transparent text-white-50 border border-dark-subtle h-100'
+            >
                 <Card.Img variant='top' src={property.image} />
                 {property.superhost === true 
                     ? <Badge bg='custom' className='d-flex flex-row py-2 px-3 rounded-pill mt-3 ms-3 fs-6 cs-bg-main position-absolute'>Superhost <FaStar className='ms-1 text-warning' /></Badge>
@@ -49,7 +60,7 @@ const SectionTwoProperty: FC<SectionTwoPropertyProps> = ({ index, property }) =>
                     <Card.Header className='px-0 h2 text-white'>${property.price}/<span className='text-white-50 h4 fw-normal'>night</span></Card.Header>
                     <Card.Header className='h3 text-white px-0 d-flex flex-row align-items-center'><FaStar className='text-warning me-2' /> {property.rating}</Card.Header>
                 </Card.Footer>
-            </Card>
+            </animated.div>
         </Col>
     )
 }
